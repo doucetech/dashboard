@@ -1,0 +1,78 @@
+<p id="notice"><%= notice %></p>
+<div class="grid-container">
+  <div class="menu-icon">
+   <i class="fas fa-bars header__menu"></i>
+ </div>
+
+ <header class="header">
+   <div class="header__search">Search...</div>
+   <div class="header__avatar">Your face</div>
+ </header>
+
+ <aside class="sidenav">
+   <div class="sidenav__close-icon">
+     <i class="fas fa-times sidenav__brand-close"></i>
+   </div>
+   <ul class="sidenav__list">
+     <li class="sidenav__list-item">Teachers</li>
+     <li class="sidenav__list-item">Library</li>
+     <li class="sidenav__list-item">Assessment</li>
+     <li class="sidenav__list-item">Notice</li>
+     <li class="sidenav__list-item">Subject</li>
+     <li class="sidenav__list-item">Parents</li>
+     <li class="sidenav__list-item">Students</li>
+     <li class="sidenav__list-item">Assignments</li>
+     <li class="sidenav__list-item">Events</li>
+     <li class="sidenav__list-item">Exams</li>
+   </ul>
+ </aside>
+
+ <main class="main">
+   <div class="main-header">
+     <div class="main-header__heading">Hello User</div>
+     <div class="main-header__updates">Recent Items</div>
+   </div>
+
+   <div class="main-cards">
+     <table>
+       <thead>
+         <tr>
+           <th>Student</th>
+           <th>Gender</th>
+           <th>ID</th>
+           <th>Admission Date</th>
+           <th>Class</th>
+           <th>Days</th>
+           <th colspan="3">Manage data</th>
+         </tr>
+       </thead>
+
+       <tbody>
+         <% @attendances.each do |attendance| %>
+           <tr>
+             <td><%= attendance.student %></td>
+             <td><%= attendance.gender %></td>
+             <td>#<%= attendance.admissionid %></td>
+             <td><%= attendance.admissiondate %></td>
+             <td><%= attendance.studentclass %></td>
+             <td><%= attendance.days %></td>
+             <td><%= link_to 'Show', attendance %></td>
+             <td><%= link_to 'Edit', edit_attendance_path(attendance) %></td>
+             <td><%= link_to 'Destroy', attendance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+           </tr>
+         <% end %>
+       </tbody>
+     </table>
+
+     <br>
+
+     <%= link_to 'New Student', new_attendance_path %>
+
+   </div>
+ </main>
+
+ <footer class="footer">
+   <div class="footer__copyright">&copy; 2018 MTH</div>
+   <div class="footer__signature">Made with love by pure genius</div>
+ </footer>
+</div>

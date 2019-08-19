@@ -1,0 +1,115 @@
+<%= form_with(model: attendance, local: true) do |form| %>
+  <% if attendance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(attendance.errors.count, "error") %> prohibited this attendance from being saved:</h2>
+
+      <ul>
+      <% attendance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :student %>
+    <%= form.text_field :student %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admissionid %>
+    <%= form.number_field :admissionid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admissiondate %>
+    <%= form.date_select :admissiondate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :studentclass %>
+    <%= form.text_field :studentclass %>
+  </div>
+
+  <div class="field">
+    <%= form.label :days %>
+    <%= form.number_field :days %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mark %>
+    <%= form.number_field :mark %>
+  </div>
+
+  <div class="field">
+    <%= form.label :result %>
+    <%= form.text_field :result %>
+  </div>
+
+  <div class="field">
+    <%= form.label :perfomance %>
+    <%= form.text_area :perfomance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :test %>
+    <%= form.number_field :test %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fees %>
+    <%= form.text_field :fees %>
+  </div>
+  <div class="field">
+    <%= form.label :english %>
+    <%= form.text_field :english %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mathematics %>
+    <%= form.text_field :mathematics %>
+  </div>
+
+  <div class="field">
+    <%= form.label :geography %>
+    <%= form.text_field :geography %>
+  </div>
+
+  <div class="field">
+    <%= form.label :history %>
+    <%= form.text_field :history %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agriculture %>
+    <%= form.text_field :agriculture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commerce %>
+    <%= form.text_field :commerce %>
+  </div>
+
+  <div class="field">
+    <%= form.label :accounting %>
+    <%= form.text_field :accounting %>
+  </div>
+
+  <div class="field">
+    <%= form.label :literature %>
+    <%= form.text_field :literature %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shona %>
+    <%= form.text_area :shona %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: MyString
+  gender: MyString
+  admissionid: 1
+  admissiondate: 2019-08-18
+  studentclass: MyString
+  days: 1
+  mark: 1
+  result: MyString
+  perfomance: MyText
+  test: 1
+  fees: 1.5
+
+two:
+  student: MyString
+  gender: MyString
+  admissionid: 1
+  admissiondate: 2019-08-18
+  studentclass: MyString
+  days: 1
+  mark: 1
+  result: MyString
+  perfomance: MyText
+  test: 1
+  fees: 1.5

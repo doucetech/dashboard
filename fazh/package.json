@@ -1,0 +1,7 @@
+{
+  "name": "fazh",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
